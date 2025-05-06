@@ -2,6 +2,7 @@ langchain
 langchain-community
 langchain-aws
 boto3
-jq
-transformers
+tiktoken
 python-dotenv
+numpy
+jq
