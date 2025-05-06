@@ -1,52 +1,179 @@
-import numpy as np
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain_community.document_loaders import JSONLoader
-from common.embeddings import get_embedder
-from common.llm_chain import get_llm
+import json
+import re
+from langchain_text_splitters import RecursiveJsonSplitter
+from langchain_aws.embeddings import BedrockEmbeddings
+from langchain_community.vectorstores import Chroma
+from langchain.chains import RetrievalQA
+from langchain.prompts import PromptTemplate
 
-def load_chunks(path="offering.json"):
-    loader = JSONLoader(file_path=path, jq_schema=".", text_content=False)
-    docs = loader.load()
-    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=50)
-    return splitter.split_documents(docs)
+from common.llm_chain import get_llm  # Your own Claude wrapper (via Bedrock)
 
-def cosine_similarity(vec1, vec2):
-    v1, v2 = np.array(vec1), np.array(vec2)
-    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2) + 1e-9)
+# Updated JSON key search utility
+def find_key_recursively(data, key):
+    if isinstance(data, dict):
+        for k, v in data.items():
+            if k == key:
+                yield v
+            yield from find_key_recursively(v, key)
+    elif isinstance(data, list):
+        for item in data:
+            yield from find_key_recursively(item, key)
+            
+# Load and split structured JSON with enriched metadata
+VALID_TYPES = ["pickpackrules", "mezzdelivery", "offeringfulfill", "mezzcreation", "csdelivery"]
 
-def build_prompt(context, question):
-    return f"""
+def load_documents(path="offering.json"):
+    with open(path, "r", encoding="utf-8") as f:
+        json_data = json.load(f)
+
+    splitter = RecursiveJsonSplitter(max_chunk_size=800)
+    split_docs = splitter.create_documents(texts=[json_data], convert_lists=True)
+
+    enriched_docs = []
+    last_valid_task_type = None
+
+    def find_key_recursively(data, key):
+        if isinstance(data, dict):
+            for k, v in data.items():
+                if k == key:
+                    return v
+                result = find_key_recursively(v, key)
+                if result:
+                    return result
+        elif isinstance(data, list):
+            for item in data:
+                result = find_key_recursively(item, key)
+                if result:
+                    return result
+        return None
+
+    for i, doc in enumerate(split_docs):
+        content = doc.page_content
+        doc.metadata["chunkIndex"] = i
+
+        task_type = None
+        payload_id = None
+
+        try:
+            parsed_json = json.loads(content)
+            task_type_candidate = find_key_recursively(parsed_json, "type")
+            if task_type_candidate in VALID_TYPES:
+                task_type = task_type_candidate
+            payload_id = find_key_recursively(parsed_json, "payloadId")
+        except json.JSONDecodeError:
+            pass
+
+        # Fallback with regex
+        if not task_type:
+            match = re.search(r'"type"\s*:\s*"(\w+)"', content)
+            if match and match.group(1) in VALID_TYPES:
+                task_type = match.group(1)
+
+        if not payload_id:
+            match = re.search(r'"payloadId"\s*:\s*"([^"]+)"', content)
+            if match:
+                payload_id = match.group(1)
+
+        if task_type:
+            doc.metadata["taskType"] = task_type
+            last_valid_task_type = task_type
+        else:
+            doc.metadata["taskType"] = "unknown"
+            if last_valid_task_type:
+                doc.metadata["slideTaskType"] = last_valid_task_type
+
+        doc.metadata["payloadId"] = payload_id if payload_id else "N/A"
+
+        enriched_docs.append(doc)
+
+        print(f"\n--- Chunk {i + 1} ---")
+        print(doc.page_content)
+        print("Metadata:", doc.metadata)
+
+    print(f"✅ Split into {len(enriched_docs)} chunks from {path}")
+    return enriched_docs
+
+
+# Ask a question using Bedrock Embeddings + Claude + LangChain RAG
+def ask_question(question):
+    docs = load_documents()
+
+    # return
+    # Embed with Amazon Titan via Bedrock
+    embedder = BedrockEmbeddings(
+        model_id="amazon.titan-embed-text-v2:0",
+        region_name="ap-south-1"
+    )
+
+    # # Create vector store and retriever
+    vectordb = Chroma.from_documents(docs, embedding=embedder)
+    retriever = vectordb.as_retriever(search_kwargs={
+        "k": 3,
+        "filter": {"taskType": "pickpackrules"}  # 👈 Filter on metadata
+    })
+
+    # Use your Claude LLM wrapper
+    llm = get_llm()
+
+    # Optional: prompt formatting
+    prompt = PromptTemplate(
+        input_variables=["context", "question"],
+        template="""
 You are an intelligent assistant. Use the context below to answer the question.
-If the answer is not present, reply with "I couldn't find that information."
+If you cannot find the answer, say: "I couldn't find that information."
 
 Context:
-\"\"\"
 {context}
-\"\"\"
 
 Question: {question}
 Answer:
 """
+    )
+    
+    #  # Manually retrieve and format
+    retrieved_docs = retriever.invoke(question)
+    for doc in retrieved_docs:
+        print("📄 Chunk:\n", doc.page_content)
+        print("🧷 Metadata:", doc.metadata)
+    
+    print(f"🔍 Retrieved {len(retrieved_docs)} chunks")
+    
+    context = "\n".join(doc.page_content for doc in retrieved_docs)
+    print("📄 Context:\n", context)
+    
+    return
+    formatted_prompt = prompt.format(context=context, question=question)
+    
+    # Stuff all chunks as context (assumes they're relevant)
+    # context = "\n\n".join(doc.page_content for doc in docs)
+    # formatted_prompt = prompt.format(context=context, question=question)
 
-def ask_question(question):
-    embedder = get_embedder()
-    llm = get_llm()
-
-    chunks = load_chunks()
-    chunk_texts = [doc.page_content for doc in chunks]
-
-    chunk_vectors = embedder.embed_documents(chunk_texts)
-    query_vector = embedder.embed_query(question)
-
-    scores = [cosine_similarity(v, query_vector) for v in chunk_vectors]
-    top_chunks = [text for _, text in sorted(zip(scores, chunk_texts), reverse=True)[:3]]
-    context = "\n".join(top_chunks)
-
-    prompt = build_prompt(context, question)
-    response = llm.invoke([{"role": "user", "content": prompt}])
-
+    # Claude inference (direct)
+    response = llm.invoke([{"role": "user", "content": formatted_prompt}])
+    
+    # Print answer
     print(f"\n💬 Question: {question}")
-    print("📄 Answer:\n" + response.content)
+    print("📄 Answer:\n", response.content)
+    
+    # DEBUG full response
+    print("\n📦 Full Raw Metadata:")
+    print(response.response_metadata)
+    
+
+    # # Create RAG chain
+    # qa_chain = RetrievalQA.from_chain_type(
+    #     llm=llm,
+    #     retriever=retriever,
+    #     chain_type="stuff",
+    #     chain_type_kwargs={"prompt": prompt}
+    # )
+
+    # # Run the question through the chain
+    # result = qa_chain.invoke({"query": question})
+
+    # print(f"\n💬 Question: {question}")
+    # print(f"📄 Answer:\n{result}")
+   
 
 if __name__ == "__main__":
-    ask_question("Why is this offering for?")
+    ask_question("Is pickpack complete for the task?")

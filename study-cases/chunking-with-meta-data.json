@@ -1,0 +1,604 @@
+INPUT JSON
+
+{
+    "tasks": [
+      {
+        "_id": "6565783637ce02aa05326c88",
+        "__t": "MezzDeliveryStatus",
+        "id": "status:urn:warnermedia:platform:ott_parity1:PROM996093:PROM996093_trailer",
+        "type": "mezzdelivery",
+        "__v": 0,
+        "audit": {
+          "createdAt": "2023-11-28T05:18:46.119+0000",
+          "firstCompletedDate": "2023-11-28T05:18:43.689+0000",
+          "generatedAt": "2023-11-28T05:18:43.689+0000",
+          "updatedAt": "2023-11-28T05:18:46.119+0000",
+          "updatedBy": "service"
+        },
+        "correlationId": "1f01b23f-b8ed-577b-ab74-efe0c28ae0c0",
+        "details": {
+          "correlationMetadata": [
+            {
+              "id": "PROM996093",
+              "idNamespace": "urn:wbd:identifier:soap:edit-id"
+            },
+            {
+              "id": "4a7ad113-8fda-4939-bda8-a9474a912805",
+              "idNamespace": "urn:wbd:identifier:distribute:partner-id"
+            },
+            {
+              "id": "urn:warnermedia:platform:ott_parity1",
+              "idNamespace": "platform"
+            },
+            {
+              "id": "PROM996093_trailer",
+              "idNamespace": "urn:wbd:identifier:distribute:distribution-id"
+            }
+          ],
+          "details": {
+            "_audit": {
+              "createdBy": "Sirius",
+              "createdTime": "2023-11-28T05:17:31.094Z",
+              "modifiedBy": "Sirius",
+              "modifiedTime": "2023-11-28T05:17:31.094Z"
+            },
+            "_id": "urn:esp:wbd:videoDeliverable:0397c061f27ec0b4cb13ab2568af0171",
+            "asset": [
+              {
+                "idType": "promo_version",
+                "id": "PROM996093",
+                "secondaryIdType": "promo_format",
+                "secondaryId": "PROM1123625"
+              }
+            ],
+            "contents": [
+              {
+                "contentType": "text",
+                "textFormat": "urn:warnermedia:timed-text:format:smpte2052",
+                "textType": "urn:warnermedia:timed-text:usage-type:captions",
+                "language": "en-US",
+                "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/OTT_parity1/prom996093-fulfill-pack-request-ab014186/",
+                "revision": 0
+              },
+              {
+                "contentType": "video",
+                "duration": "134.968",
+                "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/OTT_parity1/prom996093-fulfill-pack-request-ab014186/",
+                "revision": 0,
+                "formatType": "HD",
+                "dynamicRange": "urn:warnermedia:video:dynamic-range:sdr"
+              },
+              {
+                "contentType": "audio",
+                "audioConfig": "2.0",
+                "audioType": "program",
+                "language": "en-US",
+                "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/OTT_parity1/prom996093-fulfill-pack-request-ab014186/",
+                "md5sum": "fadeaf66c643062e3e4021647abc9cbf",
+                "revision": 0
+              },
+              {
+                "contentType": "manifestation",
+                "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/d4d84014-505d-4517-9f82-eca4620b79e6.json",
+                "storageId": "6e02cd43-8dad-11ee-8afe-12362161afe7",
+                "manifestId": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18"
+              }
+            ],
+            "csrType": "contentSubscription",
+            "fulfillmentSpec": "OTT-Amazon",
+            "majorRevision": 1,
+            "manifestationType": "full",
+            "minorRevision": 0,
+            "namespace": "wbd",
+            "namespaceId": "PROM996093-OTT-Amazon-1-0"
+          },
+          "platform": "urn:warnermedia:platform:ott_parity1",
+          "trackingIds": [
+            {
+              "id": "urn:esp:hbo:dos:deliveryRecord::8708e5f0-8dad-11ee-9c80-09956a34277f",
+              "idNamespace": "urn:esp:hbo:dos:deliveryrecord"
+            }
+          ]
+        },
+        "eventMetaId": "6d2401d9-8ce9-4bfb-99d0-f5b43197b7aa",
+        "eventSource": "esp",
+        "eventType": "status",
+        "idNamespace": "urn:wbd:identifier:soap:edit-id",
+        "isOverall": true,
+        "payloadId": "PROM996093",
+        "status": {
+          "codes": [
+            {
+              "code": "urn:esp:delivery:mezzdelivery:completed:1001"
+            }
+          ],
+          "type": "completed"
+        },
+        "legacyId": "status:urn:warnermedia:platform:ott_parity1:PROM996093"
+      },
+      {
+        "_id": "68128c5748cd4a408cb08ac5",
+        "__t": "OfferingFulfillStatus",
+        "id": "status:d37a013d-54ad-4722-af99-e39ed9901a1b",
+        "type": "offeringfulfill",
+        "__v": 0,
+        "audit": {
+          "createdAt": "2025-04-30T20:47:19.840+0000",
+          "firstCompletedDate": "2025-04-30T20:47:18.228+0000",
+          "generatedAt": "2025-04-30T20:47:18.228+0000",
+          "updatedAt": "2025-04-30T20:47:19.840+0000",
+          "updatedBy": "service"
+        },
+        "correlationId": "752f051b-3357-4a04-9ea3-55ccc19de86f",
+        "details": {
+          "correlationMetadata": [
+            {
+              "id": "d37a013d-54ad-4722-af99-e39ed9901a1b",
+              "idNamespace": "urn:wbd:identifier:presto:offering-id"
+            }
+          ],
+          "id": "d37a013d-54ad-4722-af99-e39ed9901a1b",
+          "idNamespace": "urn:wbd:identifier:presto:offering-id",
+          "platform": "urn:warnermedia:platform:ott_parity1",
+          "type": "PROGRAM"
+        },
+        "eventMetaId": "ccdced06-143c-458c-99e2-dcd544bba6e8",
+        "eventSource": "esp",
+        "eventType": "status",
+        "isOverall": true,
+        "status": {
+          "codes": [
+            {
+              "code": "urn:esp:delivery:offeringfulfillready:completed:1001"
+            }
+          ],
+          "type": "completed"
+        }
+      },
+      {
+        "_id": "65657579c3d7cd18e677505a",
+        "__t": "FulfilledDelivery",
+        "id": "status:2d369996-67f9-4ac0-a2c4-7fae497f4d99:8cc70cf4-5b7a-4347-91ab-44f39b11d4cd",
+        "type": "mezzcreation",
+        "__v": 0,
+        "audit": {
+          "createdAt": "2023-11-28T05:07:05.801+0000",
+          "generatedAt": "2023-11-28T05:17:32.653+0000",
+          "updatedAt": "2023-11-28T05:17:34.098+0000",
+          "updatedBy": "service",
+          "firstCompletedDate": "2023-11-28T05:17:32.653+0000"
+        },
+        "correlationId": "8cc70cf4-5b7a-4347-91ab-44f39b11d4cd",
+        "details": {
+          "correlationMetadata": [
+            {
+              "id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99",
+              "idNamespace": "urn:wbd:identifier:esp:cs-id"
+            },
+            {
+              "id": "8cc70cf4-5b7a-4347-91ab-44f39b11d4cd",
+              "idNamespace": "urn:acdc:fulfill:fulfillmentid"
+            },
+            {
+              "id": "OTT_parity1",
+              "idNamespace": "urn:wbd:platform"
+            }
+          ],
+          "dynamicRangeIndicator": "sdr",
+          "fulfillmentType": "full",
+          "fulfilledAnnotationslabels": [],
+          "fulfilledAudioComponents": [
+            {
+              "spokenLanguage": "en-US",
+              "soundFieldGroupType": "urn:warnermedia:audio:soundfield-group:smpte-st2067-8:standard-stereo",
+              "audioContentKind": "urn:warnermedia:audio:content:smpte-st377-41-2021:primary"
+            }
+          ],
+          "fulfilledMarkers": [],
+          "fulfilledMediaDuration": {
+            "durationSeconds": 134.968167,
+            "durationTime": "00:02:14.968",
+            "durationTimecode": "00:02:14:20"
+          },
+          "fulfilledMediaMarkerCount": 0,
+          "fulfilledTimedTextComponents": [
+            {
+              "writtenLanguage": "en-US",
+              "textUsageType": "urn:warnermedia:timed-text:usage-type:captions"
+            }
+          ],
+          "fulfilledVideoComponents": [
+            {
+              "dynamicRange": "urn:warnermedia:video:dynamic-range:sdr",
+              "compliance": [],
+              "frameSize": {
+                "height": 1080,
+                "width": 1920
+              },
+              "pictureAspectRatio": 1.78,
+              "scanningFormat": "urn:warnermedia:video:scanning-format:progressive",
+              "frameRate": {
+                "denominator": 1001,
+                "numerator": 24000
+              }
+            }
+          ],
+          "outputManifestationLocation": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/d4d84014-505d-4517-9f82-eca4620b79e6.json",
+          "instanceId": {
+            "id": "e5000001-b458-4d61-b708-c3e7750523ea",
+            "namespace": ""
+          },
+          "manifestationId": {
+            "id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18",
+            "namespace": "urn:warnermedia:manifestation.warnermedia.com"
+          },
+          "fulfilledMediaMarkerRank1Count": 0,
+          "fulfilledMediaMarkerRank2Count": 0,
+          "manifestation": {
+            "components": [
+              {
+                "writtenLanguage": "en-US",
+                "textUsageType": "urn:warnermedia:timed-text:usage-type:captions",
+                "videoType": null,
+                "componentType": "urn:warnermedia:manifestation:component-type:timed-text",
+                "componentId": "150862d4-7c52-4f52-bac1-6c15b5317bd4",
+                "manifestation": {
+                  "id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18",
+                  "idNamespace": "urn:warnermedia:manifestation.warnermedia.com",
+                  "instanceId": "e5000001-b458-4d61-b708-c3e7750523ea"
+                },
+                "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed",
+                "status": {
+                  "codes": [
+                    {
+                      "code": "urn:acdc:fulfill:mezzcreation:completed:1000",
+                      "detail": "fulfillment completed mezz built and delivered",
+                      "data": "fulfillment completed mezz built and delivered"
+                    }
+                  ],
+                  "type": "completed"
+                },
+                "audit": {
+                  "createdAt": "2023-11-28T05:07:05.801+0000",
+                  "generatedAt": "2023-11-28T05:17:32.653+0000",
+                  "updatedAt": "2023-11-28T05:17:34.098+0000",
+                  "updatedBy": "service",
+                  "firstCompletedDate": "2023-11-28T05:17:32.653+0000"
+                }
+              },
+              {
+                "dynamicRange": "urn:warnermedia:video:dynamic-range:sdr",
+                "compliance": [],
+                "frameSize": {
+                  "height": 1080,
+                  "width": 1920
+                },
+                "pictureAspectRatio": 1.78,
+                "scanningFormat": "urn:warnermedia:video:scanning-format:progressive",
+                "frameRate": {
+                  "denominator": 1001,
+                  "numerator": 24000
+                },
+                "videoType": "urn:warnermedia:video:type:primary",
+                "componentType": "urn:warnermedia:manifestation:component-type:video",
+                "componentId": "ec4edbdf-f34d-455d-abb2-d1725c33419a",
+                "manifestation": {
+                  "id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18",
+                  "idNamespace": "urn:warnermedia:manifestation.warnermedia.com",
+                  "instanceId": "e5000001-b458-4d61-b708-c3e7750523ea"
+                },
+                "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed",
+                "status": {
+                  "codes": [
+                    {
+                      "code": "urn:acdc:fulfill:mezzcreation:completed:1000",
+                      "detail": "fulfillment completed mezz built and delivered",
+                      "data": "fulfillment completed mezz built and delivered"
+                    }
+                  ],
+                  "type": "completed"
+                },
+                "audit": {
+                  "createdAt": "2023-11-28T05:07:05.801+0000",
+                  "generatedAt": "2023-11-28T05:17:32.653+0000",
+                  "updatedAt": "2023-11-28T05:17:34.098+0000",
+                  "updatedBy": "service",
+                  "firstCompletedDate": "2023-11-28T05:17:32.653+0000"
+                }
+              },
+              {
+                "spokenLanguage": "en-US",
+                "soundFieldGroupType": "urn:warnermedia:audio:soundfield-group:smpte-st2067-8:standard-stereo",
+                "audioContentKind": "urn:warnermedia:audio:content:smpte-st377-41-2021:primary",
+                "videoType": null,
+                "componentType": "urn:warnermedia:manifestation:component-type:audio",
+                "componentId": "7917f052-448e-4fde-8e0b-6410fe6e68a0",
+                "manifestation": {
+                  "id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18",
+                  "idNamespace": "urn:warnermedia:manifestation.warnermedia.com",
+                  "instanceId": "e5000001-b458-4d61-b708-c3e7750523ea"
+                },
+                "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed",
+                "status": {
+                  "codes": [
+                    {
+                      "code": "urn:acdc:fulfill:mezzcreation:completed:1000",
+                      "detail": "fulfillment completed mezz built and delivered",
+                      "data": "fulfillment completed mezz built and delivered"
+                    }
+                  ],
+                  "type": "completed"
+                },
+                "audit": {
+                  "createdAt": "2023-11-28T05:07:05.801+0000",
+                  "generatedAt": "2023-11-28T05:17:32.653+0000",
+                  "updatedAt": "2023-11-28T05:17:34.098+0000",
+                  "updatedBy": "service",
+                  "firstCompletedDate": "2023-11-28T05:17:32.653+0000"
+                }
+              }
+            ]
+          }
+        },
+        "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed",
+        "eventSource": "fulfillment-workflow",
+        "eventType": "status",
+        "fulfillmentId": "8cc70cf4-5b7a-4347-91ab-44f39b11d4cd",
+        "inactive": false,
+        "isOverall": true,
+        "status": {
+          "codes": [
+            {
+              "code": "urn:acdc:fulfill:mezzcreation:completed:1000",
+              "detail": "fulfillment completed mezz built and delivered",
+              "data": "fulfillment completed mezz built and delivered"
+            }
+          ],
+          "type": "completed"
+        }
+      },
+      {
+        "type": "csdelivery",
+        "status": {
+          "codes": [
+            {
+              "code": "urn:esp:request:csdelivery:completed:1001"
+            }
+          ],
+          "type": "completed"
+        },
+        "_id": "654bd98e97cc11ea691d9f16",
+        "__t": "CSDeliveryStatus",
+        "id": "status:urn:warnermedia:platform:ott_parity1:PROM996093:2d369996-67f9-4ac0-a2c4-7fae497f4d99",
+        "__v": 0,
+        "audit": {
+          "createdAt": "2023-11-08T18:55:10.918+0000",
+          "generatedAt": "2025-04-30T20:47:52.508+0000",
+          "updatedAt": "2025-04-30T20:47:53.026+0000",
+          "updatedBy": "service",
+          "firstCompletedDate": "2023-11-08T18:55:09.079+0000"
+        },
+        "correlationId": "9e043a28-4e6f-508c-929c-5aa4c0c79bb7",
+        "details": {
+          "contentRequests": [
+            {
+              "title": "HBO MAX FINAL DESTINATION TRAILER",
+              "assets": [
+                {
+                  "idType": "promo_version",
+                  "id": "PROM996093",
+                  "secondaryIdType": "promo_format",
+                  "secondaryId": "PROM1123625"
+                }
+              ],
+              "platform": "OTT_parity1",
+              "requestId": "2d369996-67f9-4ac0-a2c4-7fae497f4d99",
+              "needByDate": "2025-05-02T07:01:00.000Z",
+              "revision": 1,
+              "indicators": {
+                "dynamicRangeIndicator": "HDR",
+                "midRollAdsAllowedIndicator": false
+              }
+            }
+          ],
+          "correlationMetadata": [
+            {
+              "id": "PROM996093",
+              "idNamespace": "urn:wbd:identifier:soap:edit-id"
+            },
+            {
+              "id": "4a7ad113-8fda-4939-bda8-a9474a912805",
+              "idNamespace": "urn:wbd:identifier:distribute:partner-id"
+            },
+            {
+              "id": "urn:warnermedia:platform:ott_parity1",
+              "idNamespace": "platform"
+            }
+          ],
+          "platform": "urn:warnermedia:platform:ott_parity1",
+          "trackingIds": [
+            {
+              "id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99",
+              "idNamespace": "urn:wbd:identifier:esp:csr-id"
+            }
+          ],
+          "type": "program"
+        },
+        "eventMetaId": "b3c0a816-1593-465f-ae03-f6594a9b4f5b",
+        "eventSource": "esp",
+        "eventType": "status",
+        "idNamespace": "csid",
+        "isOverall": true,
+        "payloadId": "2d369996-67f9-4ac0-a2c4-7fae497f4d99"
+      },
+      {
+        "_id": "68128c7e33b2f1e78516b65e",
+        "__t": "FulfilledDelivery",
+        "id": "status:2d369996-67f9-4ac0-a2c4-7fae497f4d99:a7b96729-d675-4a50-bf95-827f8902136b",
+        "type": "pickpackrules",
+        "__v": 0,
+        "audit": {
+          "createdAt": "2025-04-30T20:47:58.996+0000",
+          "firstCompletedDate": "2023-11-28T05:06:46.349+0000",
+          "generatedAt": "2025-04-30T20:47:56.067+0000",
+          "updatedAt": "2025-04-30T20:47:59.012+0000",
+          "updatedBy": "service"
+        },
+        "correlationId": "a7b96729-d675-4a50-bf95-827f8902136b",
+        "details": {
+          "correlationMetadata": [
+            {
+              "id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99",
+              "idNamespace": "urn:wbd:identifier:esp:cs-id"
+            },
+            {
+              "id": "a7b96729-d675-4a50-bf95-827f8902136b",
+              "idNamespace": "urn:acdc:fulfill:fulfillmentid"
+            },
+            {
+              "id": "OTT_parity1",
+              "idNamespace": "urn:wbd:platform"
+            }
+          ],
+          "dynamicRangeIndicator": "hdr",
+          "fulfilledMediaMarkerCount": 0,
+          "fulfilledMediaMarkerRank1Count": 0,
+          "fulfilledMediaMarkerRank2Count": 0
+        },
+        "eventMetaId": "a2dbcb30-f59e-4454-8d35-7713787aa218",
+        "eventSource": "fulfillment-workflow",
+        "eventType": "status",
+        "fulfillmentId": "a7b96729-d675-4a50-bf95-827f8902136b",
+        "inactive": false,
+        "isOverall": true,
+        "status": {
+          "codes": [
+            {
+              "code": "urn:acdc:fulfill:pickpackrules:pending:4001",
+              "detail": "cs parked - no manifestation - fulfill stalled and retrying",
+              "data": "cs parked - no manifestation - fulfill stalled and retrying"
+            }
+          ],
+          "type": "pending"
+        }
+      }
+    ]
+  }
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+--- Chunk 1 ---
+{"tasks": {"0": {"_id": "6565783637ce02aa05326c88", "__t": "MezzDeliveryStatus", "id": "status:urn:warnermedia:platform:ott_parity1:PROM996093:PROM996093_trailer", "type": "mezzdelivery", "__v": 0, "audit": {"createdAt": "2023-11-28T05:18:46.119+0000", "firstCompletedDate": "2023-11-28T05:18:43.689+0000", "generatedAt": "2023-11-28T05:18:43.689+0000", "updatedAt": "2023-11-28T05:18:46.119+0000", "updatedBy": "service"}, "correlationId": "1f01b23f-b8ed-577b-ab74-efe0c28ae0c0", "details": {"correlationMetadata": {"0": {"id": "PROM996093", "idNamespace": "urn:wbd:identifier:soap:edit-id"}, "1": {"id": "4a7ad113-8fda-4939-bda8-a9474a912805", "idNamespace": "urn:wbd:identifier:distribute:partner-id"}, "2": {"id": "urn:warnermedia:platform:ott_parity1", "idNamespace": "platform"}}}}}}
+Metadata: {'chunkIndex': 0, 'taskType': 'mezzdelivery', 'payloadId': 'N/A'}
+
+--- Chunk 2 ---
+{"tasks": {"0": {"details": {"correlationMetadata": {"3": {"id": "PROM996093_trailer", "idNamespace": "urn:wbd:identifier:distribute:distribution-id"}}, "details": {"_audit": {"createdBy": "Sirius", "createdTime": "2023-11-28T05:17:31.094Z", "modifiedBy": "Sirius", "modifiedTime": "2023-11-28T05:17:31.094Z"}, "_id": "urn:esp:wbd:videoDeliverable:0397c061f27ec0b4cb13ab2568af0171", "asset": {"0": {"idType": "promo_version", "id": "PROM996093", "secondaryIdType": "promo_format", "secondaryId": "PROM1123625"}}, "contents": {"0": {"contentType": "text", "textFormat": "urn:warnermedia:timed-text:format:smpte2052", "textType": "urn:warnermedia:timed-text:usage-type:captions", "language": "en-US"}}}}}}}
+Metadata: {'chunkIndex': 1, 'taskType': 'mezzdelivery', 'payloadId': 'N/A'}
+
+--- Chunk 3 ---
+{"tasks": {"0": {"details": {"details": {"contents": {"0": {"location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/OTT_parity1/prom996093-fulfill-pack-request-ab014186/", "revision": 0}, "1": {"contentType": "video", "duration": "134.968", "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/OTT_parity1/prom996093-fulfill-pack-request-ab014186/", "revision": 0, "formatType": "HD", "dynamicRange": "urn:warnermedia:video:dynamic-range:sdr"}, "2": {"contentType": "audio", "audioConfig": "2.0", "audioType": "program", "language": "en-US", "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/OTT_parity1/prom996093-fulfill-pack-request-ab014186/", "md5sum": "fadeaf66c643062e3e4021647abc9cbf", "revision": 0}}}}}}}
+Metadata: {'chunkIndex': 2, 'taskType': 'mezzdelivery', 'payloadId': 'N/A'}
+
+--- Chunk 4 ---
+{"tasks": {"0": {"details": {"details": {"contents": {"3": {"contentType": "manifestation", "location": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/d4d84014-505d-4517-9f82-eca4620b79e6.json", "storageId": "6e02cd43-8dad-11ee-8afe-12362161afe7", "manifestId": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18"}}, "csrType": "contentSubscription", "fulfillmentSpec": "OTT-Amazon", "majorRevision": 1, "manifestationType": "full", "minorRevision": 0, "namespace": "wbd", "namespaceId": "PROM996093-OTT-Amazon-1-0"}, "platform": "urn:warnermedia:platform:ott_parity1", "trackingIds": {"0": {"id": "urn:esp:hbo:dos:deliveryRecord::8708e5f0-8dad-11ee-9c80-09956a34277f", "idNamespace": "urn:esp:hbo:dos:deliveryrecord"}}}, "eventMetaId": "6d2401d9-8ce9-4bfb-99d0-f5b43197b7aa", "eventSource": "esp"}}}
+Metadata: {'chunkIndex': 3, 'taskType': 'mezzdelivery', 'payloadId': 'N/A'}
+
+--- Chunk 5 ---
+{"tasks": {"0": {"eventType": "status", "idNamespace": "urn:wbd:identifier:soap:edit-id", "isOverall": true, "payloadId": "PROM996093", "status": {"codes": {"0": {"code": "urn:esp:delivery:mezzdelivery:completed:1001"}}, "type": "completed"}, "legacyId": "status:urn:warnermedia:platform:ott_parity1:PROM996093"}, "1": {"_id": "68128c5748cd4a408cb08ac5", "__t": "OfferingFulfillStatus", "id": "status:d37a013d-54ad-4722-af99-e39ed9901a1b", "type": "offeringfulfill", "__v": 0, "audit": {"createdAt": "2025-04-30T20:47:19.840+0000", "firstCompletedDate": "2025-04-30T20:47:18.228+0000", "generatedAt": "2025-04-30T20:47:18.228+0000", "updatedAt": "2025-04-30T20:47:19.840+0000", "updatedBy": "service"}, "correlationId": "752f051b-3357-4a04-9ea3-55ccc19de86f"}}}
+Metadata: {'chunkIndex': 4, 'taskType': 'offeringfulfill', 'payloadId': 'PROM996093'}
+
+--- Chunk 6 ---
+{"tasks": {"1": {"details": {"correlationMetadata": {"0": {"id": "d37a013d-54ad-4722-af99-e39ed9901a1b", "idNamespace": "urn:wbd:identifier:presto:offering-id"}}, "id": "d37a013d-54ad-4722-af99-e39ed9901a1b", "idNamespace": "urn:wbd:identifier:presto:offering-id", "platform": "urn:warnermedia:platform:ott_parity1", "type": "PROGRAM"}, "eventMetaId": "ccdced06-143c-458c-99e2-dcd544bba6e8", "eventSource": "esp", "eventType": "status", "isOverall": true, "status": {"codes": {"0": {"code": "urn:esp:delivery:offeringfulfillready:completed:1001"}}, "type": "completed"}}, "2": {"_id": "65657579c3d7cd18e677505a", "__t": "FulfilledDelivery", "id": "status:2d369996-67f9-4ac0-a2c4-7fae497f4d99:8cc70cf4-5b7a-4347-91ab-44f39b11d4cd", "type": "mezzcreation", "__v": 0}}}
+Metadata: {'chunkIndex': 5, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 7 ---
+{"tasks": {"2": {"audit": {"createdAt": "2023-11-28T05:07:05.801+0000", "generatedAt": "2023-11-28T05:17:32.653+0000", "updatedAt": "2023-11-28T05:17:34.098+0000", "updatedBy": "service", "firstCompletedDate": "2023-11-28T05:17:32.653+0000"}, "correlationId": "8cc70cf4-5b7a-4347-91ab-44f39b11d4cd", "details": {"correlationMetadata": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:cs-id"}, "1": {"id": "8cc70cf4-5b7a-4347-91ab-44f39b11d4cd", "idNamespace": "urn:acdc:fulfill:fulfillmentid"}, "2": {"id": "OTT_parity1", "idNamespace": "urn:wbd:platform"}}, "dynamicRangeIndicator": "sdr", "fulfillmentType": "full", "fulfilledAnnotationslabels": {}}}}}
+Metadata: {'chunkIndex': 6, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 8 ---
+{"tasks": {"2": {"details": {"fulfilledAudioComponents": {"0": {"spokenLanguage": "en-US", "soundFieldGroupType": "urn:warnermedia:audio:soundfield-group:smpte-st2067-8:standard-stereo", "audioContentKind": "urn:warnermedia:audio:content:smpte-st377-41-2021:primary"}}, "fulfilledMarkers": {}, "fulfilledMediaDuration": {"durationSeconds": 134.968167, "durationTime": "00:02:14.968", "durationTimecode": "00:02:14:20"}, "fulfilledMediaMarkerCount": 0, "fulfilledTimedTextComponents": {"0": {"writtenLanguage": "en-US", "textUsageType": "urn:warnermedia:timed-text:usage-type:captions"}}, "fulfilledVideoComponents": {"0": {"dynamicRange": "urn:warnermedia:video:dynamic-range:sdr", "compliance": {}, "frameSize": {"height": 1080, "width": 1920}, "pictureAspectRatio": 1.78}}}}}}
+Metadata: {'chunkIndex': 7, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 9 ---
+{"tasks": {"2": {"details": {"fulfilledVideoComponents": {"0": {"scanningFormat": "urn:warnermedia:video:scanning-format:progressive", "frameRate": {"denominator": 1001, "numerator": 24000}}}, "outputManifestationLocation": "s3://wm-msc-content-transient-prod-esp-dropbox-ue1/d4d84014-505d-4517-9f82-eca4620b79e6.json", "instanceId": {"id": "e5000001-b458-4d61-b708-c3e7750523ea", "namespace": ""}, "manifestationId": {"id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18", "namespace": "urn:warnermedia:manifestation.warnermedia.com"}, "fulfilledMediaMarkerRank1Count": 0, "fulfilledMediaMarkerRank2Count": 0}}}}
+Metadata: {'chunkIndex': 8, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 10 ---
+{"tasks": {"2": {"details": {"manifestation": {"components": {"0": {"writtenLanguage": "en-US", "textUsageType": "urn:warnermedia:timed-text:usage-type:captions", "videoType": null, "componentType": "urn:warnermedia:manifestation:component-type:timed-text", "componentId": "150862d4-7c52-4f52-bac1-6c15b5317bd4", "manifestation": {"id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18", "idNamespace": "urn:warnermedia:manifestation.warnermedia.com", "instanceId": "e5000001-b458-4d61-b708-c3e7750523ea"}, "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed", "status": {"codes": {"0": {"code": "urn:acdc:fulfill:mezzcreation:completed:1000", "detail": "fulfillment completed mezz built and delivered", "data": "fulfillment completed mezz built and delivered"}}, "type": "completed"}}}}}}}}
+Metadata: {'chunkIndex': 9, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 11 ---
+{"tasks": {"2": {"details": {"manifestation": {"components": {"0": {"audit": {"createdAt": "2023-11-28T05:07:05.801+0000", "generatedAt": "2023-11-28T05:17:32.653+0000", "updatedAt": "2023-11-28T05:17:34.098+0000", "updatedBy": "service", "firstCompletedDate": "2023-11-28T05:17:32.653+0000"}}, "1": {"dynamicRange": "urn:warnermedia:video:dynamic-range:sdr", "compliance": {}, "frameSize": {"height": 1080, "width": 1920}, "pictureAspectRatio": 1.78, "scanningFormat": "urn:warnermedia:video:scanning-format:progressive", "frameRate": {"denominator": 1001, "numerator": 24000}, "videoType": "urn:warnermedia:video:type:primary", "componentType": "urn:warnermedia:manifestation:component-type:video", "componentId": "ec4edbdf-f34d-455d-abb2-d1725c33419a"}}}}}}}
+Metadata: {'chunkIndex': 10, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 12 ---
+{"tasks": {"2": {"details": {"manifestation": {"components": {"1": {"manifestation": {"id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18", "idNamespace": "urn:warnermedia:manifestation.warnermedia.com", "instanceId": "e5000001-b458-4d61-b708-c3e7750523ea"}, "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed", "status": {"codes": {"0": {"code": "urn:acdc:fulfill:mezzcreation:completed:1000", "detail": "fulfillment completed mezz built and delivered", "data": "fulfillment completed mezz built and delivered"}}, "type": "completed"}, "audit": {"createdAt": "2023-11-28T05:07:05.801+0000", "generatedAt": "2023-11-28T05:17:32.653+0000", "updatedAt": "2023-11-28T05:17:34.098+0000", "updatedBy": "service", "firstCompletedDate": "2023-11-28T05:17:32.653+0000"}}}}}}}}
+Metadata: {'chunkIndex': 11, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 13 ---
+{"tasks": {"2": {"details": {"manifestation": {"components": {"2": {"spokenLanguage": "en-US", "soundFieldGroupType": "urn:warnermedia:audio:soundfield-group:smpte-st2067-8:standard-stereo", "audioContentKind": "urn:warnermedia:audio:content:smpte-st377-41-2021:primary", "videoType": null, "componentType": "urn:warnermedia:manifestation:component-type:audio", "componentId": "7917f052-448e-4fde-8e0b-6410fe6e68a0", "manifestation": {"id": "c2f7c3f4-beb7-46ce-ae7a-814c04b11e18", "idNamespace": "urn:warnermedia:manifestation.warnermedia.com", "instanceId": "e5000001-b458-4d61-b708-c3e7750523ea"}, "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed"}}}}}}}
+Metadata: {'chunkIndex': 12, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 14 ---
+{"tasks": {"2": {"details": {"manifestation": {"components": {"2": {"status": {"codes": {"0": {"code": "urn:acdc:fulfill:mezzcreation:completed:1000", "detail": "fulfillment completed mezz built and delivered", "data": "fulfillment completed mezz built and delivered"}}, "type": "completed"}, "audit": {"createdAt": "2023-11-28T05:07:05.801+0000", "generatedAt": "2023-11-28T05:17:32.653+0000", "updatedAt": "2023-11-28T05:17:34.098+0000", "updatedBy": "service", "firstCompletedDate": "2023-11-28T05:17:32.653+0000"}}}}}, "eventMetaId": "2fa4a55b-20f4-4e34-aed0-54f600cc37ed", "eventSource": "fulfillment-workflow", "eventType": "status", "fulfillmentId": "8cc70cf4-5b7a-4347-91ab-44f39b11d4cd", "inactive": false, "isOverall": true}}}
+Metadata: {'chunkIndex': 13, 'taskType': 'mezzcreation', 'payloadId': 'N/A'}
+
+--- Chunk 15 ---
+{"tasks": {"2": {"status": {"codes": {"0": {"code": "urn:acdc:fulfill:mezzcreation:completed:1000", "detail": "fulfillment completed mezz built and delivered", "data": "fulfillment completed mezz built and delivered"}}, "type": "completed"}}, "3": {"type": "csdelivery", "status": {"codes": {"0": {"code": "urn:esp:request:csdelivery:completed:1001"}}, "type": "completed"}, "_id": "654bd98e97cc11ea691d9f16", "__t": "CSDeliveryStatus", "id": "status:urn:warnermedia:platform:ott_parity1:PROM996093:2d369996-67f9-4ac0-a2c4-7fae497f4d99", "__v": 0, "audit": {"createdAt": "2023-11-08T18:55:10.918+0000", "generatedAt": "2025-04-30T20:47:52.508+0000", "updatedAt": "2025-04-30T20:47:53.026+0000", "updatedBy": "service", "firstCompletedDate": "2023-11-08T18:55:09.079+0000"}}}}
+Metadata: {'chunkIndex': 14, 'taskType': 'csdelivery', 'payloadId': 'N/A'}
+
+--- Chunk 16 ---
+{"tasks": {"3": {"correlationId": "9e043a28-4e6f-508c-929c-5aa4c0c79bb7", "details": {"contentRequests": {"0": {"title": "HBO MAX FINAL DESTINATION TRAILER", "assets": {"0": {"idType": "promo_version", "id": "PROM996093", "secondaryIdType": "promo_format", "secondaryId": "PROM1123625"}}, "platform": "OTT_parity1", "requestId": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "needByDate": "2025-05-02T07:01:00.000Z", "revision": 1, "indicators": {"dynamicRangeIndicator": "HDR", "midRollAdsAllowedIndicator": false}}}, "correlationMetadata": {"0": {"id": "PROM996093", "idNamespace": "urn:wbd:identifier:soap:edit-id"}, "1": {"id": "4a7ad113-8fda-4939-bda8-a9474a912805", "idNamespace": "urn:wbd:identifier:distribute:partner-id"}}}}}}
+Metadata: {'chunkIndex': 15, 'taskType': 'csdelivery', 'payloadId': 'N/A'}
+
+--- Chunk 17 ---
+{"tasks": {"3": {"details": {"correlationMetadata": {"2": {"id": "urn:warnermedia:platform:ott_parity1", "idNamespace": "platform"}}, "platform": "urn:warnermedia:platform:ott_parity1", "trackingIds": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:csr-id"}}, "type": "program"}, "eventMetaId": "b3c0a816-1593-465f-ae03-f6594a9b4f5b", "eventSource": "esp", "eventType": "status", "idNamespace": "csid", "isOverall": true, "payloadId": "2d369996-67f9-4ac0-a2c4-7fae497f4d99"}, "4": {"_id": "68128c7e33b2f1e78516b65e", "__t": "FulfilledDelivery", "id": "status:2d369996-67f9-4ac0-a2c4-7fae497f4d99:a7b96729-d675-4a50-bf95-827f8902136b", "type": "pickpackrules", "__v": 0}}}
+Metadata: {'chunkIndex': 16, 'taskType': 'pickpackrules', 'payloadId': '2d369996-67f9-4ac0-a2c4-7fae497f4d99'}
+
+--- Chunk 18 ---
+{"tasks": {"4": {"audit": {"createdAt": "2025-04-30T20:47:58.996+0000", "firstCompletedDate": "2023-11-28T05:06:46.349+0000", "generatedAt": "2025-04-30T20:47:56.067+0000", "updatedAt": "2025-04-30T20:47:59.012+0000", "updatedBy": "service"}, "correlationId": "a7b96729-d675-4a50-bf95-827f8902136b", "details": {"correlationMetadata": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:cs-id"}, "1": {"id": "a7b96729-d675-4a50-bf95-827f8902136b", "idNamespace": "urn:acdc:fulfill:fulfillmentid"}, "2": {"id": "OTT_parity1", "idNamespace": "urn:wbd:platform"}}, "dynamicRangeIndicator": "hdr", "fulfilledMediaMarkerCount": 0, "fulfilledMediaMarkerRank1Count": 0, "fulfilledMediaMarkerRank2Count": 0}, "eventMetaId": "a2dbcb30-f59e-4454-8d35-7713787aa218"}}}
+Metadata: {'chunkIndex': 17, 'taskType': 'pickpackrules', 'payloadId': 'N/A'}
+
+--- Chunk 19 ---
+{"tasks": {"4": {"eventSource": "fulfillment-workflow", "eventType": "status", "fulfillmentId": "a7b96729-d675-4a50-bf95-827f8902136b", "inactive": false, "isOverall": true, "status": {"codes": {"0": {"code": "urn:acdc:fulfill:pickpackrules:pending:4001", "detail": "cs parked - no manifestation - fulfill stalled and retrying", "data": "cs parked - no manifestation - fulfill stalled and retrying"}}, "type": "pending"}}}}
+Metadata: {'chunkIndex': 18, 'taskType': 'pickpackrules', 'payloadId': 'N/A'}
+
+-------------------------
+✅ Split into 19 chunks from offering.json
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+📄 Chunk:
+ {"tasks": {"3": {"details": {"correlationMetadata": {"2": {"id": "urn:warnermedia:platform:ott_parity1", "idNamespace": "platform"}}, "platform": "urn:warnermedia:platform:ott_parity1", "trackingIds": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:csr-id"}}, "type": "program"}, "eventMetaId": "b3c0a816-1593-465f-ae03-f6594a9b4f5b", "eventSource": "esp", "eventType": "status", "idNamespace": "csid", "isOverall": true, "payloadId": "2d369996-67f9-4ac0-a2c4-7fae497f4d99"}, "4": {"_id": "68128c7e33b2f1e78516b65e", "__t": "FulfilledDelivery", "id": "status:2d369996-67f9-4ac0-a2c4-7fae497f4d99:a7b96729-d675-4a50-bf95-827f8902136b", "type": "pickpackrules", "__v": 0}}}
+🧷 Metadata: {'chunkIndex': 16, 'payloadId': '2d369996-67f9-4ac0-a2c4-7fae497f4d99', 'taskType': 'pickpackrules'}
+
+📄 Chunk:
+ {"tasks": {"4": {"eventSource": "fulfillment-workflow", "eventType": "status", "fulfillmentId": "a7b96729-d675-4a50-bf95-827f8902136b", "inactive": false, "isOverall": true, "status": {"codes": {"0": {"code": "urn:acdc:fulfill:pickpackrules:pending:4001", "detail": "cs parked - no manifestation - fulfill stalled and retrying", "data": "cs parked - no manifestation - fulfill stalled and retrying"}}, "type": "pending"}}}}
+🧷 Metadata: {'taskType': 'pickpackrules', 'payloadId': 'N/A', 'chunkIndex': 18}
+
+📄 Chunk:
+ {"tasks": {"4": {"audit": {"createdAt": "2025-04-30T20:47:58.996+0000", "firstCompletedDate": "2023-11-28T05:06:46.349+0000", "generatedAt": "2025-04-30T20:47:56.067+0000", "updatedAt": "2025-04-30T20:47:59.012+0000", "updatedBy": "service"}, "correlationId": "a7b96729-d675-4a50-bf95-827f8902136b", "details": {"correlationMetadata": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:cs-id"}, "1": {"id": "a7b96729-d675-4a50-bf95-827f8902136b", "idNamespace": "urn:acdc:fulfill:fulfillmentid"}, "2": {"id": "OTT_parity1", "idNamespace": "urn:wbd:platform"}}, "dynamicRangeIndicator": "hdr", "fulfilledMediaMarkerCount": 0, "fulfilledMediaMarkerRank1Count": 0, "fulfilledMediaMarkerRank2Count": 0}, "eventMetaId": "a2dbcb30-f59e-4454-8d35-7713787aa218"}}}
+🧷 Metadata: {'taskType': 'pickpackrules', 'chunkIndex': 17, 'payloadId': 'N/A'}
+
+-----------------------------
+🔍 Retrieved 3 chunks
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+📄 Context:
+ {"tasks": {"3": {"details": {"correlationMetadata": {"2": {"id": "urn:warnermedia:platform:ott_parity1", "idNamespace": "platform"}}, "platform": "urn:warnermedia:platform:ott_parity1", "trackingIds": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:csr-id"}}, "type": "program"}, "eventMetaId": "b3c0a816-1593-465f-ae03-f6594a9b4f5b", "eventSource": "esp", "eventType": "status", "idNamespace": "csid", "isOverall": true, "payloadId": "2d369996-67f9-4ac0-a2c4-7fae497f4d99"}, "4": {"_id": "68128c7e33b2f1e78516b65e", "__t": "FulfilledDelivery", "id": "status:2d369996-67f9-4ac0-a2c4-7fae497f4d99:a7b96729-d675-4a50-bf95-827f8902136b", "type": "pickpackrules", "__v": 0}}}
+{"tasks": {"4": {"eventSource": "fulfillment-workflow", "eventType": "status", "fulfillmentId": "a7b96729-d675-4a50-bf95-827f8902136b", "inactive": false, "isOverall": true, "status": {"codes": {"0": {"code": "urn:acdc:fulfill:pickpackrules:pending:4001", "detail": "cs parked - no manifestation - fulfill stalled and retrying", "data": "cs parked - no manifestation - fulfill stalled and retrying"}}, "type": "pending"}}}}
+{"tasks": {"4": {"audit": {"createdAt": "2025-04-30T20:47:58.996+0000", "firstCompletedDate": "2023-11-28T05:06:46.349+0000", "generatedAt": "2025-04-30T20:47:56.067+0000", "updatedAt": "2025-04-30T20:47:59.012+0000", "updatedBy": "service"}, "correlationId": "a7b96729-d675-4a50-bf95-827f8902136b", "details": {"correlationMetadata": {"0": {"id": "2d369996-67f9-4ac0-a2c4-7fae497f4d99", "idNamespace": "urn:wbd:identifier:esp:cs-id"}, "1": {"id": "a7b96729-d675-4a50-bf95-827f8902136b", "idNamespace": "urn:acdc:fulfill:fulfillmentid"}, "2": {"id": "OTT_parity1", "idNamespace": "urn:wbd:platform"}}, "dynamicRangeIndicator": "hdr", "fulfilledMediaMarkerCount": 0, "fulfilledMediaMarkerRank1Count": 0, "fulfilledMediaMarkerRank2Count": 0}, "eventMetaId": "a2dbcb30-f59e-4454-8d35-7713787aa218"}}}
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+Observations:
+    - Spill happens which might lead to inaccurate results. Please check the logs for more details.
+    
+    - Fix:
+        - Maybe keep the old tasktype and the new one whenever sliding happens.

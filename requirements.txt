@@ -6,3 +6,5 @@ tiktoken
 python-dotenv
 numpy
 jq
+chromadb
+langchain-aws

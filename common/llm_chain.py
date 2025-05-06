@@ -15,5 +15,7 @@ def get_llm():
             "top_k": 250,
             "top_p": 0.999,
             "stop_sequences": ["\n\nHuman:"]
-        }
+        },
+        streaming=False,
+        verbose=True
     )
