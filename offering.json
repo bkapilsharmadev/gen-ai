@@ -1,0 +1,13 @@
+{
+    "offering": {
+      "id": "12345",
+      "title": "Amazing Documentary",
+      "description": "This documentary explores the wonders of the ocean life...",
+      "actions": {
+        "play": { "allowed": true },
+        "download": { "allowed": false }
+      },
+      "platform": "OTT"
+    }
+  }
+  
